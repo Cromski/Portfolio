@@ -1,13 +1,23 @@
-import { useState } from 'react'
-import Profile from "./pages/Profile"
+import { createContext, useEffect, useState } from 'react'
 import CombinePages from './components/CombinePages'
+import PageContext from './PageContext'
+import './index.css'
 
 function App() {
-  //const [count, setCount] = useState(0)
+  const [currentPage, setCurrentPage] = useState<string>("")
+
+  const SetCurrentPageContext = createContext(setCurrentPage)
+
+  useEffect(() => {
+    console.log(currentPage)
+  }, [currentPage] )
 
   return (
-    <div className=" text-center h-full">
-      <CombinePages></CombinePages>
+    <div className=" text-center ">
+      <PageContext.Provider value={{currentPage, setCurrentPage}}>
+        <CombinePages />
+      </PageContext.Provider>
+      
     </div>
   )
 }
