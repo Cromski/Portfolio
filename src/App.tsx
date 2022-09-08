@@ -13,7 +13,7 @@ function App() {
   }, [currentPage] )
 
   return (
-    <div className=" text-center ">
+    <div className=" text-center text-neutral-300 ">
       <PageContext.Provider value={{currentPage, setCurrentPage}}>
         <CombinePages />
       </PageContext.Provider>
