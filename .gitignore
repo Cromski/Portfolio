@@ -1,6 +1,14 @@
 # Created by https://www.toptal.com/developers/gitignore/api/yarn,react,visualstudiocode,jetbrains+all,git,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=yarn,react,visualstudiocode,jetbrains+all,git,node
 
+### StorybookJs ###
+# gitignore template for the Storybook, UI guide for front apps
+# website: https://storybook.js.org/
+
+storybook-static/
+
+# End of https://www.toptal.com/developers/gitignore/api/storybookjs
+
 ### Git ###
 # Created by git for backups. To disable backups in Git:
 # $ git config --global mergetool.keepBackup false
