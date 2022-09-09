@@ -1,17 +1,18 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 import Block from './Block'
 
 
 interface Props {
-    overHeader: string
+    overHeader: string,
+    children: ReactNode
 }
 
-const Thing: FC<Props> = ({ overHeader }) => (
+const Thing: FC<Props> = ( { overHeader, children }) => (
     <div className=' bg-slate-200 bg-opacity-5 border-2 inline-block w-[50%] rounded-2xl mt-[3%]'>
-        <h1 className=" mt-3 text-3xl ">{overHeader}</h1>
+        <h1 className=" font-medium mt-3 text-3xl ">{overHeader}</h1>
+        <hr className=' border-dashed mt-[1%] mb-[1%] w-[2%] mx-auto'></hr>
         <div className=' mx-auto'>
-            <Block header={'University'} date={'2020-2023'} thing={'IT University of Copenhagen'} />
-            <Block header={'High school'} date={'2017-2020'} thing={'Sydkysten Gymnasium HTX'} />
+            {children}
         </div>
     </div>
 )

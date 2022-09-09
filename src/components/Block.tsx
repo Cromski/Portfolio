@@ -1,16 +1,21 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 
 interface Props {
     header: string
     date: string
-    thing: string
+    children: ReactNode
 }
 
-const Block: FC<Props> = ({header, date, thing}) => (
-    <div className=' mx-auto  w-[80%] mb-7'>
-        <h1 className=' float-left text-3xl '>{header}</h1>
-        <h1 className=' float-left '   >{date}</h1>
-        <h1>{thing}</h1>
+const Block: FC<Props> = ({header, date, children}) => (
+    <div className=' mx-auto  w-[80%] mb-11 flex-row' >
+        <div className='flex-col float-left'>
+            <h1 className=' text-[#EEE8AA] text-3xl '>{header}</h1>
+            <h1 className='  '>{date}</h1>
+        </div>
+        <div className=' '>
+            {children}
+        </div>
+        
     </div>
 )
 

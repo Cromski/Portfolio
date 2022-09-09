@@ -3,6 +3,9 @@ import ProfileSVG from '../../public/Profile.svg'
 import { useContext } from "react"
 import PageContext from "../PageContext"
 import Thing from "../components/Thing"
+import Block from "../components/Block"
+import LinkIcons from "../components/LinkIcons"
+import tempFaceIcon from "../../public/IotaHeroes-Logo.jpg"
 
 const info: Page = {
     heading: "About me",
@@ -24,17 +27,37 @@ const Profile = () => {
 const PageContent = () => {
     return (
         <div className=' overflow-y-scroll max-h-screen '> {/* overflow-y-auto */}
-            <h1 className=" mt-[10%] mb-12 text-4xl ">Jakob Henriksen</h1>
-            <img src="../../public/IotaHeroes-Logo.jpg" alt="svg" className=" rounded-[40px] w-[230px] mx-auto " />
+            <h1 className=" mt-[6%] mb-12 text-4xl ">Jakob Henriksen</h1>
+            <img src="../../public/IotaHeroes-Logo.jpg" alt="svg" className=" rounded-[40px] w-[17%] mx-auto " />
             
+            <div className=" flex-row mt-5 w-full">
+                <LinkIcons hrefLink={'https://www.github.com/cromski'} alt={'github'} icon={tempFaceIcon} />
+                <LinkIcons hrefLink={'https://www.youtube.com/c/krowell'} alt={'youtube'} icon={tempFaceIcon} />
+                <LinkIcons hrefLink={'https://www.linkedin.com/in/jakob-henriksen-9863b8243/'} alt={'linkedin'} icon={tempFaceIcon} />
+             </div>
+            
+
             <div className=" mx-auto">
-                <Thing overHeader={'Education'}></Thing>
+                <Thing overHeader={'Experience'}>
+                    <Block header={'Chr. Hansen'} date={'2020-present'}>
+                        <p>IT Supporter</p>
+                    </Block> 
+                </Thing>
             </div>
-           
+
+            <div className=" mx-auto">
+                <Thing overHeader={'Education'}>
+                    <Block header={'University'} date={'2020-2023'} >
+                        <p> IT University of Copenhagen </p>
+                    </Block>
+                    <Block header={'High school'} date={'2017-2020'}>
+                        <p>Sydkysten Gymnasium HTX</p>
+                    </Block>
+                </Thing>
+            </div>
+
             
            
-
-
         </div>
     )
 }
