@@ -27,7 +27,7 @@ const Profile = () => {
 const PageContent = () => {
     return (
         <div className=' overflow-y-scroll max-h-screen '> {/* overflow-y-auto */}
-            <h1 className=" mt-[6%] mb-12 text-4xl ">Jakob Henriksen</h1>
+            <h1 className=" mt-[3%] mb-12 text-4xl ">Jakob Henriksen</h1>
             <img src="../../public/IotaHeroes-Logo.jpg" alt="svg" className=" rounded-[40px] w-[17%] mx-auto " />
             
             <div className=" flex-row mt-5 w-full">
@@ -47,7 +47,7 @@ const PageContent = () => {
 
             <div className=" mx-auto">
                 <Thing overHeader={'Education'}>
-                    <Block header={'University'} date={'2020-2023'} >
+                    <Block header={'University'} date={'2020-present'} >
                         <p> IT University of Copenhagen </p>
                     </Block>
                     <Block header={'High school'} date={'2017-2020'}>
