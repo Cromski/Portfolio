@@ -2,7 +2,7 @@ import { Page } from "../extra/types"
 import ProfileSVG from '../../public/Profile.svg'
 import { useContext } from "react"
 import PageContext from "../PageContext"
-import Block from "../components/Block"
+import Thing from "../components/Thing"
 
 const info: Page = {
     heading: "About me",
@@ -23,13 +23,12 @@ const Profile = () => {
 
 const PageContent = () => {
     return (
-        <div style={{}} className=' overflow-y-scroll max-h-screen '> {/* overflow-y-auto */}
+        <div className=' overflow-y-scroll max-h-screen '> {/* overflow-y-auto */}
             <h1 className=" mt-[10%] mb-12 text-4xl ">Jakob Henriksen</h1>
             <img src="../../public/IotaHeroes-Logo.jpg" alt="svg" className=" rounded-[40px] w-[230px] mx-auto " />
-            <h1 className=" text-3xl ">Education</h1>
-            <div className="flex-col ">
-                <Block header={'University'} date={'2020-2023'} thing={'IT University of Copenhagen'}></Block>
-                <Block header={'High school'} date={'2017-2020'} thing={'Sydkysten Gymnasium HTX'}></Block>
+            
+            <div className=" mx-auto">
+                <Thing overHeader={'Education'}></Thing>
             </div>
            
             
