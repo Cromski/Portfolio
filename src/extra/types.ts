@@ -1,5 +1,7 @@
 export interface Page{
-    heading: string;
+    miniHeading: string;
+    bigHeading: string;
+    id: string;
     svg: string;
     color: string;
 }

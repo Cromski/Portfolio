@@ -4,7 +4,9 @@ import { useContext } from "react"
 import PageContext from "../PageContext"
 
 const info: Page = {
-    heading: "Skills",
+    miniHeading: "Skills",
+    bigHeading: "Skills",
+    id: "TempId",
     svg: SkillSVG,
     color: "#291b40"
 }
@@ -13,9 +15,9 @@ const PageTemplate = () => {
     const pageContext = useContext(PageContext)
 
     return (
-    <div style={{ backgroundColor: `${info.color}`}} className=" h-screen" onClick={() => pageContext.setCurrentPage("PageTemplate")}>
+    <div style={{ backgroundColor: `${info.color}`}} className=" h-screen" onClick={() => pageContext.setCurrentPage(info.id)}>
         
-        {pageContext.currentPage === "PageTemplate" ? <PageContent/> : <MinimizedPage/>}
+        {pageContext.currentPage === info.id ? <PageContent/> : <MinimizedPage/>}
     </div>
     )
 }
@@ -23,7 +25,7 @@ const PageTemplate = () => {
 const PageContent = () => {
     return (
         <div style={{}} className=' overflow-y-auto max-h-screen scrollbar'>
-            <h1 className=" text-4xl ">{info.heading}</h1>
+            <h1 className=" text-4xl ">{info.bigHeading}</h1>
             <img src={info.svg} alt="svg" className=" w-[80px] mx-auto " />
             
         </div>
@@ -33,7 +35,7 @@ const PageContent = () => {
 const MinimizedPage = () => {
     return (
         <div className=' h-screen sticky'>
-            <h1 className=" relative text-4xl text-neutral-300 top-72 ">{info.heading}</h1>
+            <h1 className=" relative text-4xl text-neutral-300 top-72 ">{info.miniHeading}</h1>
             <img src={info.svg} alt="svg" className=" relative w-[80px] mx-auto top-72 " />
         </div>
     )
