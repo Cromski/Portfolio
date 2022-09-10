@@ -1,15 +1,15 @@
 import { Page } from "../extra/types"
-import ProfileSVG from '../../public/Profile.svg'
+import ProfileSVG from '../images/Profile.svg'
 import { useContext } from "react"
 import PageContext from "../PageContext"
 import Thing from "../components/Thing"
 import Block from "../components/Block"
 import LinkIcons from "../components/LinkIcons"
-import tempFaceIcon from "../../public/IotaHeroes-Logo.jpg"
-import instagramSVG from '../../public/InstagramSVG.svg'
-import linkedinSVG from '../../public/linkedinSVG.svg'
-import youtubeSVG from '../../public/youtubesvg.svg'
-import githubSVG from '../../public/githubsvg.svg'
+import tempFaceIcon from "../images/IotaHeroes-Logo.jpg"
+import instagramSVG from '../images/InstagramSVG.svg'
+import linkedinSVG from '../images/linkedinSVG.svg'
+import youtubeSVG from '../images/youtubesvg.svg'
+import githubSVG from '../images/githubsvg.svg'
 
 const info: Page = {
     miniHeading: "About me",
@@ -32,7 +32,7 @@ const Profile = () => {
 
 const PageContent = () => {
     return (
-        <div className=' overflow-y-scroll max-h-screen scrollbar'> {/* overflow-y-auto */}
+        <div className=' overflow-y-scroll max-h-screen scrollbar-hide'> {/* overflow-y-auto */}
             <h1 className=" mt-[3%] mb-12 text-4xl ">Jakob Henriksen</h1>
             <img src={tempFaceIcon} alt="svg" className=" rounded-[40px] w-[17%] mx-auto " />
             
