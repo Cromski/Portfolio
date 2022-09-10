@@ -9,6 +9,7 @@ import tempFaceIcon from "../../public/IotaHeroes-Logo.jpg"
 import instagramSVG from '../../public/InstagramSVG.svg'
 import linkedinSVG from '../../public/linkedinSVG.svg'
 import youtubeSVG from '../../public/youtubesvg.svg'
+import githubSVG from '../../public/githubsvg.svg'
 
 const info: Page = {
     miniHeading: "About me",
@@ -31,12 +32,12 @@ const Profile = () => {
 
 const PageContent = () => {
     return (
-        <div className=' overflow-y-scroll max-h-screen '> {/* overflow-y-auto */}
+        <div className=' overflow-y-scroll max-h-screen scrollbar'> {/* overflow-y-auto */}
             <h1 className=" mt-[3%] mb-12 text-4xl ">Jakob Henriksen</h1>
-            <img src="../../public/IotaHeroes-Logo.jpg" alt="svg" className=" rounded-[40px] w-[17%] mx-auto " />
+            <img src={tempFaceIcon} alt="svg" className=" rounded-[40px] w-[17%] mx-auto " />
             
             <div className=" flex-row mt-5 w-full">
-                <LinkIcons hrefLink={'https://www.github.com/cromski'} alt={'github'} icon={tempFaceIcon} />
+                <LinkIcons hrefLink={'https://www.github.com/cromski'} alt={'github'} icon={githubSVG} />
                 <LinkIcons hrefLink={'https://www.youtube.com/c/krowell'} alt={'youtube'} icon={youtubeSVG} />
                 <LinkIcons hrefLink={'https://www.linkedin.com/in/jakob-henriksen-9863b8243/'} alt={'linkedin'} icon={linkedinSVG} />
                 <LinkIcons hrefLink={'https://www.instagram.com/kr0well/'} alt={'instagram'} icon={instagramSVG} />
