@@ -10,7 +10,7 @@ const CombinePages = () => {
     const pageContext = useContext(PageContext)
 
     return(
-        <div  style={{ display: 'grid', gridTemplateColumns: `${hmmm(pageContext.currentPage)}`, gap: '4px' }} className=" min-h-screen max-h-screen " > 
+        <div  style={{ display: 'grid', gridTemplateColumns: `${hmmm(pageContext.currentPage)}`, gap: '3px' }} className=" min-h-screen max-h-screen " > 
     {/* style={{ display: 'grid', gridTemplateColumns: `repeat(${amountOfPages}, 1fr)` } */} 
     {/* className={`grid grid-cols-[repeat(2,_minmax(0px,_1fr))] gap-1`} */} 
     {/*             grid-cols-[${numberOfPages}px_minmax(0px,_1fr)] */}

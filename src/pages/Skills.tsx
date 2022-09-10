@@ -2,6 +2,8 @@ import { Page } from '../extra/types'
 import SkillSVG from '../../public/Skill.svg'
 import { useContext } from "react"
 import PageContext from "../PageContext"
+import SkillSquare from '../components/SkillSquare'
+import TempFacePic from '../../public/IotaHeroes-Logo.jpg'
 
 const info: Page = {
     heading: "Skills",
@@ -23,8 +25,26 @@ const Skills = () => {
 const PageContent = () => {
     return (
         <div style={{}} className=' overflow-y-auto max-h-screen scrollbar'>
-            <h1 className=" text-4xl ">{info.heading}</h1>
+            <h1 className=" mt-[3%] mb-12 text-4xl ">{info.heading}</h1>
             <img src={info.svg} alt="svg" className=" w-[80px] mx-auto " />
+            <div className=' content-center flex-row w-[65%] mx-auto'>
+                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
+            </div>
             
         </div>
     )
