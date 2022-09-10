@@ -6,7 +6,9 @@ import Thing from "../components/Thing"
 import Block from "../components/Block"
 import LinkIcons from "../components/LinkIcons"
 import tempFaceIcon from "../../public/IotaHeroes-Logo.jpg"
-import youtubeLogo from '../../public/youtube-logo.png'
+import instagramSVG from '../../public/InstagramSVG.svg'
+import linkedinSVG from '../../public/linkedinSVG.svg'
+import youtubeSVG from '../../public/youtubesvg.svg'
 
 const info: Page = {
     miniHeading: "About me",
@@ -35,9 +37,9 @@ const PageContent = () => {
             
             <div className=" flex-row mt-5 w-full">
                 <LinkIcons hrefLink={'https://www.github.com/cromski'} alt={'github'} icon={tempFaceIcon} />
-                <LinkIcons hrefLink={'https://www.youtube.com/c/krowell'} alt={'youtube'} icon={youtubeLogo} />
-                <LinkIcons hrefLink={'https://www.linkedin.com/in/jakob-henriksen-9863b8243/'} alt={'linkedin'} icon={tempFaceIcon} />
-                <LinkIcons hrefLink={'https://www.instagram.com/kr0well/'} alt={'instagram'} icon={tempFaceIcon} />
+                <LinkIcons hrefLink={'https://www.youtube.com/c/krowell'} alt={'youtube'} icon={youtubeSVG} />
+                <LinkIcons hrefLink={'https://www.linkedin.com/in/jakob-henriksen-9863b8243/'} alt={'linkedin'} icon={linkedinSVG} />
+                <LinkIcons hrefLink={'https://www.instagram.com/kr0well/'} alt={'instagram'} icon={instagramSVG} />
              </div>
             
 
