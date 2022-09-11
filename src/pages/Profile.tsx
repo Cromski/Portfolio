@@ -7,9 +7,9 @@ import Block from "../components/Block"
 import LinkIcons from "../components/LinkIcons"
 import tempFaceIcon from "../assets/IotaHeroes-Logo.jpg"
 import instagramSVG from '../assets/InstagramSVG.svg'
-import linkedinSVG from '../assets/linkedinSVG.svg'
-import youtubeSVG from '../assets/youtubesvg.svg'
-import githubSVG from '../assets/githubsvg.svg'
+import linkedinSVG from '../assets/LinkedInSVG.svg'
+import youtubeSVG from '../assets/YoutubeSVG.svg'
+import githubSVG from '../assets/GithubSVG.svg'
 
 const info: Page = {
     miniHeading: "About me",
