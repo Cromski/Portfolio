@@ -6,7 +6,7 @@ import './index.css'
 function App() {
   const [currentPage, setCurrentPage] = useState<string>("")
 
-  const SetCurrentPageContext = createContext(setCurrentPage)
+  const SetCurrentPageContext = createContext(setCurrentPage);
 
   useEffect(() => {
     console.log(currentPage)
