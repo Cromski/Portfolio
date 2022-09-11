@@ -34,7 +34,7 @@ const PageContent: FC<{}> = () => {
     const pageContext = useContext(PageContext)
 
     return (
-        <div className=' overflow-y-scroll max-h-screen scrollbar-hide'> 
+        <div className='overflow-y-scroll max-h-screen scrollbar-hide'> 
             
             <h1 className="pt-[3%] pb-6 text-4xl cursor-pointer
                            transition-all hover:tracking-wider" 
