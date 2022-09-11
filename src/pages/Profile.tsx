@@ -23,7 +23,7 @@ const Profile: FC<{}> = () => {
     const pageContext = useContext(PageContext)
     
     return (
-    <div style={{ backgroundColor: `${info.color}`}} className=" h-screen" onClick={() => pageContext.setCurrentPage(info.id)}>
+    <div style={{ backgroundColor: `${info.color}`}} className=" h-screen" >
 
         {pageContext.currentPage === info.id ? <PageContent /> : <MinimizedPage/>}
         
@@ -35,12 +35,13 @@ const PageContent: FC<{}> = () => {
 
     return (
         <div className=' overflow-y-scroll max-h-screen scrollbar-hide'> 
+            
             <h1 className="pt-[3%] pb-6 text-4xl cursor-pointer
                            transition-all hover:tracking-wider" 
                 onClick={() => pageContext.setCurrentPage("fk")}
                            >Jakob Henriksen</h1>
             <img src={tempFaceIcon} alt="me" className="rounded-[40px] w-[17%] mx-auto mt-6
-                                                         grayscale-0 duration-100 transition-all hover:grayscale-[20%] " />
+                                                        grayscale-0 duration-100 transition-all hover:grayscale-[20%] " />
             
             <div className=" flex-row mt-5 w-full">
                 <LinkIcons hrefLink={'https://www.github.com/cromski'} alt={'github'} icon={githubSVG} />
@@ -49,6 +50,18 @@ const PageContent: FC<{}> = () => {
                 <LinkIcons hrefLink={'https://www.instagram.com/kr0well/'} alt={'instagram'} icon={instagramSVG} />
              </div>
             
+
+            <div className=" mx-auto">
+                <div className=" grid-cols-2">
+                    <Thing overHeader={"About me"}>
+                    
+                    </Thing>
+                    <Thing overHeader={"Contact"}>
+                    
+                    </Thing>
+                </div>
+                
+            </div>
 
             <div className=" mx-auto">
                 <Thing overHeader={'Experience'}>
@@ -78,8 +91,10 @@ const PageContent: FC<{}> = () => {
 }
 
 const MinimizedPage = () => {
+    const pageContext = useContext(PageContext)
+
     return (
-        <div>
+        <div className="h-screen" onClick={() => pageContext.setCurrentPage(info.id)}>
             <h1 className=" relative text-4xl text-neutral-300 top-72 ">{info.miniHeading}</h1>
             <img src={info.svg} alt="svg" className=" relative w-[80px] mx-auto top-72 " />
         </div>
