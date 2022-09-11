@@ -7,15 +7,18 @@ interface Props {
 }
 
 const Block: FC<Props> = ({header, date, children}) => (
-    <div className=' mx-auto  w-[80%] mb-11 flex-row' >
-        <div className='flex-col float-left'>
-            <h1 className=' text-[#EEE8AA] text-3xl '>{header}</h1>
-            <h1 className='  '>{date}</h1>
+    <div>
+        <hr className='w-[0%]'></hr>
+        <div className=' mx-auto  w-[80%] mb-11 flex-row' >
+            <div className='flex-col float-left'>
+                <h1 className=' text-[#EEE8AA] text-3xl '>{header}</h1>
+                <h1 className='  '>{date}</h1>
+            </div>
+            <div className=' '>
+                {children}
+            </div>
+            
         </div>
-        <div className=' '>
-            {children}
-        </div>
-        
     </div>
 )
 
