@@ -1,6 +1,6 @@
 import { Page } from "../extra/types"
 import ProfileSVG from '../images/Profile.svg'
-import { useContext } from "react"
+import { useContext, FC } from "react"
 import PageContext from "../PageContext"
 import Thing from "../components/Thing"
 import Block from "../components/Block"
@@ -19,22 +19,28 @@ const info: Page = {
     color: "#221b40"
 }
 
-const Profile = () => {
+const Profile: FC<{}> = () => {
     const pageContext = useContext(PageContext)
-
+    
     return (
     <div style={{ backgroundColor: `${info.color}`}} className=" h-screen" onClick={() => pageContext.setCurrentPage(info.id)}>
 
-        {pageContext.currentPage === info.id ? <PageContent/> : <MinimizedPage/>}
+        {pageContext.currentPage === info.id ? <PageContent /> : <MinimizedPage/>}
         
     </div>
 )}
 
-const PageContent = () => {
+const PageContent: FC<{}> = () => {
+    const pageContext = useContext(PageContext)
+
     return (
-        <div className=' overflow-y-scroll max-h-screen scrollbar-hide'> {/* overflow-y-auto */}
-            <h1 className=" mt-[3%] mb-12 text-4xl ">Jakob Henriksen</h1>
-            <img src={tempFaceIcon} alt="svg" className=" rounded-[40px] w-[17%] mx-auto " />
+        <div className=' overflow-y-scroll max-h-screen scrollbar-hide'> 
+            <h1 className="pt-[3%] pb-6 text-4xl cursor-pointer
+                           transition-all hover:tracking-wider" 
+                onClick={() => pageContext.setCurrentPage("fk")}
+                           >Jakob Henriksen</h1>
+            <img src={tempFaceIcon} alt="me" className="rounded-[40px] w-[17%] mx-auto mt-6
+                                                         grayscale-0 duration-100 transition-all hover:grayscale-[20%] " />
             
             <div className=" flex-row mt-5 w-full">
                 <LinkIcons hrefLink={'https://www.github.com/cromski'} alt={'github'} icon={githubSVG} />
@@ -55,7 +61,7 @@ const PageContent = () => {
             <div className=" mx-auto">
                 <Thing overHeader={'Education'}>
                     <Block header={'University'} date={'2020-present'} >
-                        <p>IT University of Copenhagen</p>
+                        <p className="mt-[20px]">IT University of Copenhagen</p>
                         <p className=" text-sm">BSc - Software Development</p>
                     </Block>
                     <Block header={'High school'} date={'2017-2020'}>
