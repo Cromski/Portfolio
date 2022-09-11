@@ -1,15 +1,15 @@
 import { Page } from "../extra/types"
-import ProfileSVG from '/images/Profile.svg'
+import ProfileSVG from '/public/images/Profile.svg'
 import { useContext, FC } from "react"
 import PageContext from "../PageContext"
 import Thing from "../components/Thing"
 import Block from "../components/Block"
 import LinkIcons from "../components/LinkIcons"
-import tempFaceIcon from "/images/IotaHeroes-Logo.jpg"
-import instagramSVG from '/images/InstagramSVG.svg'
-import linkedinSVG from '/images/linkedinSVG.svg'
-import youtubeSVG from '/images/youtubesvg.svg'
-import githubSVG from '/images/githubSVG.svg'
+import tempFaceIcon from "/public/images/IotaHeroes-Logo.jpg"
+import instagramSVG from '/public/images/InstagramSVG.svg'
+import linkedinSVG from '/public/images/linkedinSVG.svg'
+import youtubeSVG from '/public/images/youtubesvg.svg'
+import githubSVG from '/public/images/githubSVG.svg'
 
 const info: Page = {
     miniHeading: "About me",

@@ -1,9 +1,9 @@
 import { Page } from '../extra/types'
-import SkillSVG from '/images/Skill.svg'
+import SkillSVG from '/public/images/Skill.svg'
 import { useContext } from "react"
 import PageContext from "../PageContext"
 import SkillSquare from '../components/SkillSquare'
-import TempFacePic from '/images/IotaHeroes-Logo.jpg'
+import TempFacePic from '/public/images/IotaHeroes-Logo.jpg'
 
 const info: Page = {
     miniHeading: "Skills",
