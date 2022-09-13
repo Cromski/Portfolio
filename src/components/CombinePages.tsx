@@ -10,7 +10,7 @@ const CombinePages = () => {
     const pageContext = useContext(PageContext)
 
     return(
-        <div className={` grid-cols-[${hmmm(pageContext.currentPage)}] gap-[3px] grid column min-h-screen max-h-screen`} > 
+        <div className={` grid-cols-[1fr,_minmax(0px,_1fr)] lg:grid-cols-[${hmmm(pageContext.currentPage)}]   gap-[3px]  lg:gap-[50px] grid h-screen `} > 
             <div>
                 <Profile />
             </div>
