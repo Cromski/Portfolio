@@ -10,6 +10,7 @@ import instagramSVG from '../assets/InstagramSVG.svg'
 import linkedinSVG from '../assets/LinkedInSVG.svg'
 import youtubeSVG from '../assets/YoutubeSVG.svg'
 import githubSVG from '../assets/GithubSVG.svg'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const info: Page = {
     miniHeading: "About me",
