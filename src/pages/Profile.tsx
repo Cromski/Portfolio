@@ -40,7 +40,7 @@ const PageContent: FC<{}> = () => {
                            transition-all hover:tracking-wider" 
                 onClick={() => pageContext.setCurrentPage("home")}
                            >Jakob Henriksen</h1>
-            <img src={tempFaceIcon} alt="me" className="rounded-[40px] w-[17%] mx-auto mt-6
+            <img src={tempFaceIcon} alt="me" className="rounded-[40px] min-w-[170px] w-[17%] mx-auto mt-6
                                                         grayscale-0 duration-100 transition-all hover:grayscale-[20%] " />
             
             <div className=" flex-row mt-5 w-full">
