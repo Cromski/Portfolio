@@ -85,19 +85,6 @@ const SmallScreen = () => {
         }
     }
     
-    return (
-
-        <div className={` gap-[3px] grid h-screen grid-rows-2 `} > 
-
-            <div className={` row-span-1 overflow-scroll scrollbar-hide `}>
-                <Profile />
-            </div>
-            <div className={` row-span-1 overflow-scroll scrollbar-hide `}>
-                <Skills />
-            </div>
-        </div>
-
-    )
 }
 
 
