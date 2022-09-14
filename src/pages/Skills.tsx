@@ -17,7 +17,7 @@ const Skills = () => {
     const pageContext = useContext(PageContext)
 
     return (
-    <div style={{ backgroundColor: `${info.color}`}} className=" h-screen" onClick={() => pageContext.setCurrentPage(info.id)}>
+    <div style={{ backgroundColor: `${info.color}`}} className=" h-full" >
         
         {pageContext.currentPage === info.id ? <PageContent/> : <MinimizedPage/>}
     </div>
@@ -25,9 +25,13 @@ const Skills = () => {
 }
 
 const PageContent = () => {
+    const pageContext = useContext(PageContext)
     return (
-        <div style={{}} className=' overflow-y-auto max-h-screen scrollbar-hide'>
-            <h1 className=" mt-[3%] mb-12 text-4xl ">{info.bigHeading}</h1>
+        <div style={{ backgroundColor: `${info.color}`}} className=' overflow-y-auto h-screen scrollbar-hide'>
+            <h1 className=" pt-[3%] pb-6 text-4xl cursor-pointer
+                           transition-all hover:tracking-wider"
+                onClick={() => pageContext.setCurrentPage("home")}
+                >{info.bigHeading}</h1>
             <img src={info.svg} alt="svg" className=" w-[80px] mx-auto " />
             <div className=' content-center flex-row w-[65%] mx-auto'>
                 <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
@@ -53,10 +57,11 @@ const PageContent = () => {
 }
 
 const MinimizedPage = () => {
+    const pageContext = useContext(PageContext)
     return (
-        <div className=' h-screen sticky'>
-            <h1 className=" relative text-4xl text-neutral-300 top-72 ">{info.miniHeading}</h1>
-            <img src={info.svg} alt="svg" className=" relative w-[80px] mx-auto top-72 " />
+        <div style={{ backgroundColor: `${info.color}`}} className='h-full  ' onClick={() => pageContext.setCurrentPage(info.id)}>
+            <h1 className="  inline-block pt-[20%] text-4xl text-neutral-300 ">{info.miniHeading}</h1>
+            <img src={info.svg} alt="svg" className="  w-[80px] mx-auto mt-[1%] " />
         </div>
     )
 }

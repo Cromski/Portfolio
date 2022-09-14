@@ -16,14 +16,14 @@ const info: Page = {
     bigHeading: "Jakob Henriksen",
     id: "Profile",
     svg: ProfileSVG,
-    color: "#221b40"
+    color: "#025c00"
 }
 
 const Profile: FC<{}> = () => {
     const pageContext = useContext(PageContext)
     
     return (
-    <div style={{ backgroundColor: `${info.color}`}} className=" h-screen" >
+    <div style={{ backgroundColor: `${info.color}`}} className=" h-full" >
 
         {pageContext.currentPage === info.id ? <PageContent /> : <MinimizedPage/>}
         
@@ -34,11 +34,11 @@ const PageContent: FC<{}> = () => {
     const pageContext = useContext(PageContext)
 
     return (
-        <div className='overflow-y-scroll max-h-screen scrollbar-hide'> 
+        <div style={{ backgroundColor: `${info.color}`}} className='overflow-y-scroll h-screen scrollbar-hide'> 
             
             <h1 className="pt-[3%] pb-6 text-4xl cursor-pointer
                            transition-all hover:tracking-wider" 
-                onClick={() => pageContext.setCurrentPage("fk")}
+                onClick={() => pageContext.setCurrentPage("home")}
                            >Jakob Henriksen</h1>
             <img src={tempFaceIcon} alt="me" className="rounded-[40px] w-[17%] mx-auto mt-6
                                                         grayscale-0 duration-100 transition-all hover:grayscale-[20%] " />
@@ -94,9 +94,9 @@ const MinimizedPage = () => {
     const pageContext = useContext(PageContext)
 
     return (
-        <div className="h-screen" onClick={() => pageContext.setCurrentPage(info.id)}>
-            <h1 className=" relative text-4xl text-neutral-300 top-72 ">{info.miniHeading}</h1>
-            <img src={info.svg} alt="svg" className=" relative w-[80px] mx-auto top-72 " />
+        <div style={{ backgroundColor: `${info.color}`}} className=" h-full  " onClick={() => pageContext.setCurrentPage(info.id)}>
+            <h1 className="  inline-block pt-[20%] text-4xl text-neutral-300 ">{info.miniHeading}</h1>
+            <img src={info.svg} alt="svg" className="  w-[80px] mx-auto mt-[1%] " />
         </div>
     )
 }
