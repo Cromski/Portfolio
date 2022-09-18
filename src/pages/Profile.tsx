@@ -16,7 +16,7 @@ const info: Page = {
     bigHeading: "Jakob Henriksen",
     id: "Profile",
     svg: ProfileSVG,
-    color: "#025c00"
+    color: "#343434"
 }
 
 const Profile: FC<{}> = () => {
@@ -51,14 +51,19 @@ const PageContent: FC<{}> = () => {
              </div>
             
 
-            <div className=" mx-auto">
-                <div className=" grid-cols-2">
-                    <Thing overHeader={"About me"}>
+            <div className=" w-[80%] mx-auto">
+                <div className=" flex-row ">
+                    <div className=" w-[50%] inline-block">
+                        <Thing overHeader={"About me"}>
+                        
+                        </Thing>
+                    </div>
+                    <div className=" w-[50%] inline-block">
+                        <Thing overHeader={"Contact"}>
+                        
+                        </Thing>
+                    </div>
                     
-                    </Thing>
-                    <Thing overHeader={"Contact"}>
-                    
-                    </Thing>
                 </div>
                 
             </div>
@@ -84,8 +89,6 @@ const PageContent: FC<{}> = () => {
                 </Thing>
             </div>
 
-            
-           
         </div>
     )
 }
@@ -94,8 +97,8 @@ const MinimizedPage = () => {
     const pageContext = useContext(PageContext)
 
     return (
-        <div style={{ backgroundColor: `${info.color}`}} className=" h-full pt-[20%] " onClick={() => pageContext.setCurrentPage(info.id)}>
-            <h1 className="  inline-block text-4xl text-neutral-300 ">{info.miniHeading}</h1>
+        <div style={{ backgroundColor: `${info.color}`}} className=" h-full " onClick={() => pageContext.setCurrentPage(info.id)}> {/*put pt-20% in maybe line below */}
+            <h1 className="  inline-block text-4xl text-neutral-300 pt-[20%] ">{info.miniHeading}</h1>
             <img src={info.svg} alt="svg" className="  w-[80px] mx-auto mt-[1%] " />
         </div>
     )

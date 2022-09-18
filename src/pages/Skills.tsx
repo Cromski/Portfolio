@@ -4,6 +4,7 @@ import { useContext } from "react"
 import PageContext from "../PageContext"
 import SkillSquare from '../components/SkillSquare'
 import TempFacePic from '../assets/IotaHeroes-Logo.jpg'
+import SkillSquareContainer from '../components/SkillSquareContainer'
 
 const info: Page = {
     miniHeading: "Skills",
@@ -33,24 +34,30 @@ const PageContent = () => {
                 onClick={() => pageContext.setCurrentPage("home")}
                 >{info.bigHeading}</h1>
             <img src={info.svg} alt="svg" className=" w-[80px] mx-auto " />
-            <div className=' content-center flex-row w-[65%] mx-auto'>
+            <SkillSquareContainer skillHeader='Languages'>
+                <SkillSquare skillName='JavaScript' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='TypeScript' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='C#' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='SQL' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='F#' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Go' pic={TempFacePic} skillRating='Experienced' />
                 <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
-                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
-                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
-                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
-                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
-                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
-                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
-                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
-                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
-                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
-                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
-                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
-                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
-                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
-                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
-                <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
-            </div>
+            </SkillSquareContainer>
+            
+            <SkillSquareContainer skillHeader='Technologies'>
+                <SkillSquare skillName='React' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='TailwindCSS' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Git' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Materialize' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Blazor' pic={TempFacePic} skillRating='Experienced' />
+            </SkillSquareContainer>
+
+            <SkillSquareContainer skillHeader='Other'>
+                <SkillSquare skillName='Office 365' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='LaTeX' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Power apps' pic={TempFacePic} skillRating='Experienced' />
+                <SkillSquare skillName='Service Now' pic={TempFacePic} skillRating='Experienced' />
+            </SkillSquareContainer>
             
         </div>
     )
