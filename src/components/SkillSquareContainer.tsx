@@ -1,4 +1,4 @@
-import React, {FC, ReactNode} from 'react'
+import { FC, ReactNode } from 'react'
 
 interface Props{
     skillHeader: string
@@ -7,7 +7,7 @@ interface Props{
 
 const SkillSquareContainer: FC<Props> = ({skillHeader, children}) => {
     return (
-        <div>
+        <div className=''>
             <h1 className=' font-medium text-3xl'>{skillHeader}</h1>
             <div className=' content-center flex-row w-[65%] mx-auto'>
                 {children}

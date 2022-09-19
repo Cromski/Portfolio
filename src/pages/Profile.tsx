@@ -35,7 +35,6 @@ const PageContent: FC<{}> = () => {
 
     return (
         <div className=" absolute w-full h-full overflow-hidden">
-
         
             <div style={{ backgroundColor: `${info.color}`}} className=' scroll-smooth overflow-y-scroll h-screen scrollbar-hide'> 
                 
@@ -54,21 +53,15 @@ const PageContent: FC<{}> = () => {
                 </div>
                 
 
-                <div className=" w-[80%] mx-auto">
-                    <div className=" flex-row ">
-                        <div className=" w-[50%] inline-block">
-                            <Thing overHeader={"About me"}>
-                            
-                            </Thing>
-                        </div>
-                        <div className=" w-[50%] inline-block">
-                            <Thing overHeader={"Contact"}>
-                            
-                            </Thing>
-                        </div>
-                        
-                    </div>
+                <div className=" mx-auto">
+                    <Thing overHeader={"About me"}>
                     
+                    </Thing>
+                </div>
+                <div className=" mx-auto">
+                    <Thing overHeader={"Contact"}>
+                    
+                    </Thing>
                 </div>
 
                 <div className=" mx-auto">
