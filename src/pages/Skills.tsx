@@ -66,8 +66,8 @@ const PageContent = () => {
 const MinimizedPage = () => {
     const pageContext = useContext(PageContext)
     return (
-        <div style={{ backgroundColor: `${info.color}`}} className='h-full  ' onClick={() => pageContext.setCurrentPage(info.id)}>
-            <h1 className="  inline-block pt-[20%] text-4xl text-neutral-300 ">{info.miniHeading}</h1>
+        <div style={{ backgroundColor: `${info.color}`}} className=' flex-col relative top-[40%] overflow-hidden ' onClick={() => pageContext.setCurrentPage(info.id)}>
+            <h1 className="  inline-block text-4xl text-neutral-300 ">{info.miniHeading}</h1>
             <img src={info.svg} alt="svg" className="  w-[80px] mx-auto mt-[1%] " />
         </div>
     )
