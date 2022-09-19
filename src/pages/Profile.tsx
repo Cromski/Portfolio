@@ -43,11 +43,11 @@ const PageContent: FC<{}> = () => {
                     onClick={() => pageContext.setCurrentPage("home")}
                             >Jakob Henriksen</h1>
                 <img src={tempFaceIcon} alt="me" className="rounded-[40px] min-w-[170px] w-[17%] mx-auto mt-6
-                                                            grayscale-0 duration-100 transition-all hover:grayscale-[20%] " />
+                                                            duration-[50ms] hover:rounded-[10px] " />
                 
-                <div className=" flex-row mt-5 w-full">
+                <div className=" flex h-[45px] w-full pt-3 pb-3 justify-center ">
                     <LinkIcons hrefLink={'https://www.github.com/cromski'} alt={'github'} icon={githubSVG} />
-                    <LinkIcons hrefLink={'https://www.youtube.com/c/krowell'} alt={'youtube'} icon={youtubeSVG} />
+                    <LinkIcons hrefLink={'https://www.youtube.com/krowell'} alt={'youtube'} icon={youtubeSVG} />
                     <LinkIcons hrefLink={'https://www.linkedin.com/in/jakob-henriksen-9863b8243/'} alt={'linkedin'} icon={linkedinSVG} />
                     <LinkIcons hrefLink={'https://www.instagram.com/kr0well/'} alt={'instagram'} icon={instagramSVG} />
                 </div>
