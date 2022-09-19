@@ -34,7 +34,7 @@ const PageContent: FC<{}> = () => {
     const pageContext = useContext(PageContext)
 
     return (
-        <div className=" absolute w-full h-full overflow-hidden">
+        <div className=" absolute w-[90%] h-full overflow-hidden">
         
             <div style={{ backgroundColor: `${info.color}`}} className=' scroll-smooth overflow-y-scroll h-screen scrollbar-hide'> 
                 
@@ -94,11 +94,13 @@ const MinimizedPage = () => {
     const pageContext = useContext(PageContext)
 
     return (
-        <div style={{ backgroundColor: `${info.color}`}} className=" flex-col relative top-[40%] overflow-hidden " onClick={() => pageContext.setCurrentPage(info.id)}> {/*put pt-20% in maybe line below */}
+        <div className=' h-full' onClick={() => pageContext.setCurrentPage(info.id)}>
+            <div style={{ backgroundColor: `${info.color}`}} className=" flex-col relative top-[40%] overflow-hidden " onClick={() => pageContext.setCurrentPage(info.id)}> {/*put pt-20% in maybe line below */}
+                
+                <h1 className="  inline-block text-4xl text-neutral-300">{info.miniHeading}</h1>
+                <img src={info.svg} alt="svg" className="  w-[80px] mx-auto mt-[1%] " />
             
-            <h1 className="  inline-block text-4xl text-neutral-300">{info.miniHeading}</h1>
-            <img src={info.svg} alt="svg" className="  w-[80px] mx-auto mt-[1%] " />
-            
+            </div>
         </div>
     )
 }
