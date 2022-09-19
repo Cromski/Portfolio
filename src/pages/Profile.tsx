@@ -34,7 +34,7 @@ const PageContent: FC<{}> = () => {
     const pageContext = useContext(PageContext)
 
     return (
-        <div className=" absolute w-full h-full overfl">
+        <div className=" absolute w-full h-full overflow-hidden">
 
         
             <div style={{ backgroundColor: `${info.color}`}} className=' scroll-smooth overflow-y-scroll h-screen scrollbar-hide'> 
