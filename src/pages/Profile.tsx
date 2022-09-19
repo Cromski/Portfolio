@@ -16,14 +16,14 @@ const info: Page = {
     bigHeading: "Jakob Henriksen",
     id: "Profile",
     svg: ProfileSVG,
-    color: "#221b40"
+    color: "#343434"
 }
 
 const Profile: FC<{}> = () => {
     const pageContext = useContext(PageContext)
     
     return (
-    <div style={{ backgroundColor: `${info.color}`}} className=" h-screen" >
+    <div style={{ backgroundColor: `${info.color}`}} className=" h-full" >
 
         {pageContext.currentPage === info.id ? <PageContent /> : <MinimizedPage/>}
         
@@ -34,13 +34,13 @@ const PageContent: FC<{}> = () => {
     const pageContext = useContext(PageContext)
 
     return (
-        <div className='overflow-y-scroll max-h-screen scrollbar-hide'> 
+        <div style={{ backgroundColor: `${info.color}`}} className='overflow-y-scroll h-screen scrollbar-hide'> 
             
             <h1 className="pt-[3%] pb-6 text-4xl cursor-pointer
                            transition-all hover:tracking-wider" 
-                onClick={() => pageContext.setCurrentPage("fk")}
+                onClick={() => pageContext.setCurrentPage("home")}
                            >Jakob Henriksen</h1>
-            <img src={tempFaceIcon} alt="me" className="rounded-[40px] w-[17%] mx-auto mt-6
+            <img src={tempFaceIcon} alt="me" className="rounded-[40px] min-w-[170px] w-[17%] mx-auto mt-6
                                                         grayscale-0 duration-100 transition-all hover:grayscale-[20%] " />
             
             <div className=" flex-row mt-5 w-full">
@@ -51,14 +51,19 @@ const PageContent: FC<{}> = () => {
              </div>
             
 
-            <div className=" mx-auto">
-                <div className=" grid-cols-2">
-                    <Thing overHeader={"About me"}>
+            <div className=" w-[80%] mx-auto">
+                <div className=" flex-row ">
+                    <div className=" w-[50%] inline-block">
+                        <Thing overHeader={"About me"}>
+                        
+                        </Thing>
+                    </div>
+                    <div className=" w-[50%] inline-block">
+                        <Thing overHeader={"Contact"}>
+                        
+                        </Thing>
+                    </div>
                     
-                    </Thing>
-                    <Thing overHeader={"Contact"}>
-                    
-                    </Thing>
                 </div>
                 
             </div>
@@ -84,8 +89,6 @@ const PageContent: FC<{}> = () => {
                 </Thing>
             </div>
 
-            
-           
         </div>
     )
 }
@@ -94,9 +97,11 @@ const MinimizedPage = () => {
     const pageContext = useContext(PageContext)
 
     return (
-        <div className="h-screen" onClick={() => pageContext.setCurrentPage(info.id)}>
-            <h1 className=" relative text-4xl text-neutral-300 top-72 ">{info.miniHeading}</h1>
-            <img src={info.svg} alt="svg" className=" relative w-[80px] mx-auto top-72 " />
+        <div style={{ backgroundColor: `${info.color}`}} className=" flex-col relative top-[40%] overflow-hidden " onClick={() => pageContext.setCurrentPage(info.id)}> {/*put pt-20% in maybe line below */}
+            
+            <h1 className="  inline-block text-4xl text-neutral-300">{info.miniHeading}</h1>
+            <img src={info.svg} alt="svg" className="  w-[80px] mx-auto mt-[1%] " />
+            
         </div>
     )
 }

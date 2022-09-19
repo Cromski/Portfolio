@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{tsx,ts,js,jsx}"],
   theme: {
     extend: {
+      screens: {
+        'realsm': '1020px'
+      },
       animation: {
         'wiggle': 'wiggle 1s ease-in-out 1'
       },
