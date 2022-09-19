@@ -34,61 +34,65 @@ const PageContent: FC<{}> = () => {
     const pageContext = useContext(PageContext)
 
     return (
-        <div style={{ backgroundColor: `${info.color}`}} className=' scroll-smooth overflow-y-scroll h-screen scrollbar-hide'> 
-            
-            <h1 className="pt-[3%] pb-6 text-4xl cursor-pointer
-                           transition-all hover:tracking-wider" 
-                onClick={() => pageContext.setCurrentPage("home")}
-                           >Jakob Henriksen</h1>
-            <img src={tempFaceIcon} alt="me" className="rounded-[40px] min-w-[170px] w-[17%] mx-auto mt-6
-                                                        grayscale-0 duration-100 transition-all hover:grayscale-[20%] " />
-            
-            <div className=" flex-row mt-5 w-full">
-                <LinkIcons hrefLink={'https://www.github.com/cromski'} alt={'github'} icon={githubSVG} />
-                <LinkIcons hrefLink={'https://www.youtube.com/c/krowell'} alt={'youtube'} icon={youtubeSVG} />
-                <LinkIcons hrefLink={'https://www.linkedin.com/in/jakob-henriksen-9863b8243/'} alt={'linkedin'} icon={linkedinSVG} />
-                <LinkIcons hrefLink={'https://www.instagram.com/kr0well/'} alt={'instagram'} icon={instagramSVG} />
-             </div>
-            
+        <div className=" absolute w-full h-full overflow-hidden">
 
-            <div className=" w-[80%] mx-auto">
-                <div className=" flex-row ">
-                    <div className=" w-[50%] inline-block">
-                        <Thing overHeader={"About me"}>
+        
+            <div style={{ backgroundColor: `${info.color}`}} className=' scroll-smooth overflow-y-scroll h-screen scrollbar-hide'> 
+                
+                <h1 className="pt-[3%] pb-6 text-4xl cursor-pointer
+                            transition-all hover:tracking-wider" 
+                    onClick={() => pageContext.setCurrentPage("home")}
+                            >Jakob Henriksen</h1>
+                <img src={tempFaceIcon} alt="me" className="rounded-[40px] min-w-[170px] w-[17%] mx-auto mt-6
+                                                            grayscale-0 duration-100 transition-all hover:grayscale-[20%] " />
+                
+                <div className=" flex-row mt-5 w-full">
+                    <LinkIcons hrefLink={'https://www.github.com/cromski'} alt={'github'} icon={githubSVG} />
+                    <LinkIcons hrefLink={'https://www.youtube.com/c/krowell'} alt={'youtube'} icon={youtubeSVG} />
+                    <LinkIcons hrefLink={'https://www.linkedin.com/in/jakob-henriksen-9863b8243/'} alt={'linkedin'} icon={linkedinSVG} />
+                    <LinkIcons hrefLink={'https://www.instagram.com/kr0well/'} alt={'instagram'} icon={instagramSVG} />
+                </div>
+                
+
+                <div className=" w-[80%] mx-auto">
+                    <div className=" flex-row ">
+                        <div className=" w-[50%] inline-block">
+                            <Thing overHeader={"About me"}>
+                            
+                            </Thing>
+                        </div>
+                        <div className=" w-[50%] inline-block">
+                            <Thing overHeader={"Contact"}>
+                            
+                            </Thing>
+                        </div>
                         
-                        </Thing>
-                    </div>
-                    <div className=" w-[50%] inline-block">
-                        <Thing overHeader={"Contact"}>
-                        
-                        </Thing>
                     </div>
                     
                 </div>
-                
-            </div>
 
-            <div className=" mx-auto">
-                <Thing overHeader={'Experience'}>
-                    <Block header={'Chr. Hansen'} date={'2020-present'}>
-                        <p>IT Supporter</p>
-                    </Block> 
-                </Thing>
-            </div>
+                <div className=" mx-auto">
+                    <Thing overHeader={'Experience'}>
+                        <Block header={'Chr. Hansen'} date={'2020-present'}>
+                            <p>IT Supporter</p>
+                        </Block> 
+                    </Thing>
+                </div>
 
-            <div className=" mx-auto">
-                <Thing overHeader={'Education'}>
-                    <Block header={'University'} date={'2020-present'} >
-                        <p className="mt-[20px]">IT University of Copenhagen</p>
-                        <p className=" text-sm">BSc - Software Development</p>
-                    </Block>
-                    <Block header={'High school'} date={'2017-2020'}>
-                        <p>NEXT Sydkysten Gymnasium</p>
-                        <p>HTX</p>
-                    </Block>
-                </Thing>
-            </div>
+                <div className=" mx-auto">
+                    <Thing overHeader={'Education'}>
+                        <Block header={'University'} date={'2020-present'} >
+                            <p className="mt-[20px]">IT University of Copenhagen</p>
+                            <p className=" text-sm">BSc - Software Development</p>
+                        </Block>
+                        <Block header={'High school'} date={'2017-2020'}>
+                            <p>NEXT Sydkysten Gymnasium</p>
+                            <p>HTX</p>
+                        </Block>
+                    </Thing>
+                </div>
 
+            </div>
         </div>
     )
 }
