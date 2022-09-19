@@ -34,7 +34,7 @@ const PageContent: FC<{}> = () => {
     const pageContext = useContext(PageContext)
 
     return (
-        <div className=" absolute w-full h-full overflow-hidden">
+        <div className=" absolute w-full h-full overfl">
 
         
             <div style={{ backgroundColor: `${info.color}`}} className=' scroll-smooth overflow-y-scroll h-screen scrollbar-hide'> 
@@ -79,7 +79,7 @@ const PageContent: FC<{}> = () => {
                     </Thing>
                 </div>
 
-                <div className=" mx-auto">
+                <div className=" mx-auto mb-32">
                     <Thing overHeader={'Education'}>
                         <Block header={'University'} date={'2020-present'} >
                             <p className="mt-[20px]">IT University of Copenhagen</p>
