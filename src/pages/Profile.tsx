@@ -51,21 +51,26 @@ const PageContent: FC<{}> = () => {
                     <LinkIcons hrefLink={'https://www.linkedin.com/in/jakob-henriksen-9863b8243/'} alt={'linkedin'} icon={linkedinSVG} />
                     <LinkIcons hrefLink={'https://www.instagram.com/kr0well/'} alt={'instagram'} icon={instagramSVG} />
                 </div>
-                
 
-                <div className=" mx-auto">
+                <div className=" mx-auto ">
                     <Thing overHeader={"About me"}>
-                    
+                        <div className=" mb-3">
+                            <p className=" w-3/4 mx-auto">My name is Jakob Henriksen and I'm currently on my third year, taking a Bachelor in Software Development.</p>
+                        </div>
                     </Thing>
                 </div>
                 <div className=" mx-auto">
-                    <Thing overHeader={"Contact"}>
-                        <div className=" flex-row">
-                            <div className=" w-[50%] text-right inline-block pr-[2%]"> {/* left side */}
-                                <h1>Email:</h1>
+                    <Thing overHeader={"Information"}>
+                        <div className=" flex-row mb-3">
+                            <div className=" w-[50%] text-right inline-block pr-[2%]">
+                                <h1 className=" text-lg font-semibold">Email:</h1>
+                                <h1 className=" text-lg font-semibold">Phone:</h1>
+                                <h1 className=" text-lg font-semibold">Birthyear:</h1>
                             </div>
-                            <div className=" w-[50%] text-left inline-block pl-[2%]">
+                            <div className=" w-[50%] text-left inline-block pl-[2%] leading-[1.75rem]">
                                 <h1>jakobrhenriksen@outlook.com</h1>
+                                <h1>+45 1234 1234</h1>
+                                <h1>2001</h1>
                             </div>
                         </div>
                     </Thing>
@@ -73,22 +78,32 @@ const PageContent: FC<{}> = () => {
 
                 <div className=" mx-auto">
                     <Thing overHeader={'Experience'}>
-                        <Block header={'Chr. Hansen'} date={'2020-present'}>
-                            <p>IT Supporter</p>
-                        </Block> 
+                        <div className="mb-3">
+                            <Block header={'Chr. Hansen'} date={'2020-present'}>
+                                <p className=" mt-[10px] text-lg font-semibold">IT Supporter - Student worker</p>
+                                <ul className=" list-disc inline-block ml-[10%] w-3/4 text-left">
+                                    <li>Solving tickets in ServiceNow</li>
+                                    <li>Managing Sharepoint sites</li>
+                                    <li>Creating Power Apps</li>
+                                    <li>Creating Automation flows</li>
+                                </ul>
+                            </Block> 
+                        </div>
                     </Thing>
                 </div>
 
                 <div className=" mx-auto mb-32">
                     <Thing overHeader={'Education'}>
-                        <Block header={'University'} date={'2020-present'} >
-                            <p className="mt-[20px]">IT University of Copenhagen</p>
-                            <p className=" text-sm">BSc - Software Development</p>
-                        </Block>
-                        <Block header={'High school'} date={'2017-2020'}>
-                            <p>NEXT Sydkysten Gymnasium</p>
-                            <p>HTX</p>
-                        </Block>
+                        <div className="mb-3">
+                            <Block header={'University'} date={'2020-present'} >
+                                <p className="mt-[10px] text-lg font-semibold">IT University of Copenhagen</p>
+                                <p className="">BSc - Software Development</p>
+                            </Block>
+                            <Block header={'High school'} date={'2017-2020'}>
+                                <p className="mt-[10px] text-lg font-semibold">NEXT Sydkysten Gymnasium</p>
+                                <p>HTX</p>
+                            </Block>
+                        </div>
                     </Thing>
                 </div>
 
@@ -104,7 +119,7 @@ const MinimizedPage = () => {
         <div className=' h-full' onClick={() => pageContext.setCurrentPage(info.id)}>
             <div style={{ backgroundColor: `${info.color}`}} className=" flex-col relative top-[40%] overflow-hidden " onClick={() => pageContext.setCurrentPage(info.id)}> {/*put pt-20% in maybe line below */}
                 
-                <h1 className="  inline-block text-4xl text-neutral-300">{info.miniHeading}</h1>
+                <h1 className=" cursor-default inline-block text-4xl text-neutral-300">{info.miniHeading}</h1>
                 <img src={info.svg} alt="svg" className="  w-[80px] mx-auto mt-[1%] " />
             
             </div>

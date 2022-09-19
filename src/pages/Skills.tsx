@@ -59,6 +59,10 @@ const PageContent = () => {
                     <SkillSquare skillName='Jetbrains apps' pic={TempFacePic} skillRating='Experienced' />
                     <SkillSquare skillName='VS Code' pic={TempFacePic} skillRating='Experienced' />
                     <SkillSquare skillName='Visual Studio' pic={TempFacePic} skillRating='Experienced' />
+                    <SkillSquare skillName='Adobe Photoshop' pic={TempFacePic} skillRating='Experienced' />
+                    <SkillSquare skillName='Adobe Premiere Pro' pic={TempFacePic} skillRating='Experienced' />
+                    <SkillSquare skillName='Affinity Designer' pic={TempFacePic} skillRating='Experienced' />
+                    <SkillSquare skillName='Affinity Photo' pic={TempFacePic} skillRating='Experienced' />
                     <SkillSquare skillName='Vim' pic={TempFacePic} skillRating='Experienced' />
                 </SkillSquareContainer>
 
@@ -79,7 +83,7 @@ const MinimizedPage = () => {
     return (
         <div className=' h-full' onClick={() => pageContext.setCurrentPage(info.id)}>
             <div style={{ backgroundColor: `${info.color}`}} className=' flex-col relative top-[40%] overflow-hidden ' >
-                <h1 className="  inline-block text-4xl text-neutral-300 ">{info.miniHeading}</h1>
+                <h1 className=" cursor-default inline-block text-4xl text-neutral-300 ">{info.miniHeading}</h1>
                 <img src={info.svg} alt="svg" className="  w-[80px] mx-auto mt-[1%] " />
             </div>
         </div>
