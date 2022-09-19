@@ -41,10 +41,10 @@ const BigScreen = () => {
             {/* 1fr,_minmax(0px,_1fr) */}
             {/* grid-cols-[${hmmm(pageContext.currentPage)}] lg:grid-cols-1 */}
 
-            <div style={{ gridColumn: hmmm(pageContext.currentPage)[0]}} className={`  `}>
+            <div style={{ gridColumn: hmmm(pageContext.currentPage)[0]}} className=''>
                 <Profile />
             </div>
-            <div style={{ gridColumn: hmmm(pageContext.currentPage)[1]}} className={`  `}>
+            <div style={{ gridColumn: hmmm(pageContext.currentPage)[1]}} className=''>
                 <Skills />
             </div>
         </div>

@@ -34,7 +34,7 @@ const PageContent: FC<{}> = () => {
     const pageContext = useContext(PageContext)
 
     return (
-        <div className=" absolute w-[90%] h-full overflow-hidden">
+        <div className=" absolute w-full realsm:w-[90%] h-full overflow-hidden">
         
             <div style={{ backgroundColor: `${info.color}`}} className=' scroll-smooth overflow-y-scroll h-screen scrollbar-hide'> 
                 
@@ -60,7 +60,14 @@ const PageContent: FC<{}> = () => {
                 </div>
                 <div className=" mx-auto">
                     <Thing overHeader={"Contact"}>
-                    
+                        <div className=" flex-row">
+                            <div className=" w-[50%] text-right inline-block pr-[2%]"> {/* left side */}
+                                <h1>Email:</h1>
+                            </div>
+                            <div className=" w-[50%] text-left inline-block pl-[2%]">
+                                <h1>jakobrhenriksen@outlook.com</h1>
+                            </div>
+                        </div>
                     </Thing>
                 </div>
 

@@ -28,7 +28,7 @@ const Skills = () => {
 const PageContent = () => {
     const pageContext = useContext(PageContext)
     return (
-        <div className=" absolute w-[90%] h-full overflow-hidden">
+        <div className=" absolute w-full realsm:w-[90%] h-full overflow-hidden">
             
             <div style={{ backgroundColor: `${info.color}`}} className=' overflow-y-auto h-screen scrollbar-hide'>
                 <h1 className=" pt-[3%] pb-6 text-4xl cursor-pointer
