@@ -41,6 +41,7 @@ const PageContent = () => {
                     <SkillSquare skillName='TypeScript' pic={TempFacePic} skillRating='Experienced' />
                     <SkillSquare skillName='C#' pic={TempFacePic} skillRating='Experienced' />
                     <SkillSquare skillName='SQL' pic={TempFacePic} skillRating='Experienced' />
+                    <SkillSquare skillName='Python' pic={TempFacePic} skillRating='Experienced' />
                     <SkillSquare skillName='F#' pic={TempFacePic} skillRating='Experienced' />
                     <SkillSquare skillName='Go' pic={TempFacePic} skillRating='Experienced' />
                     <SkillSquare skillName='Java' pic={TempFacePic} skillRating='Experienced' />
@@ -52,6 +53,13 @@ const PageContent = () => {
                     <SkillSquare skillName='Git' pic={TempFacePic} skillRating='Experienced' />
                     <SkillSquare skillName='Materialize' pic={TempFacePic} skillRating='Experienced' />
                     <SkillSquare skillName='Blazor' pic={TempFacePic} skillRating='Experienced' />
+                </SkillSquareContainer>
+
+                <SkillSquareContainer skillHeader={`IDE's and editors`}>
+                    <SkillSquare skillName='Jetbrains apps' pic={TempFacePic} skillRating='Experienced' />
+                    <SkillSquare skillName='VS Code' pic={TempFacePic} skillRating='Experienced' />
+                    <SkillSquare skillName='Visual Studio' pic={TempFacePic} skillRating='Experienced' />
+                    <SkillSquare skillName='Vim' pic={TempFacePic} skillRating='Experienced' />
                 </SkillSquareContainer>
 
                 <SkillSquareContainer skillHeader='Other'>
