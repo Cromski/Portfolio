@@ -85,9 +85,10 @@ const PageContent: FC<{}> = () => {
                         <div className="mb-3">
                             <Block header={'Chr. Hansen'} date={'2020-present'}>
                                 <p className=" mt-[10px] text-lg font-semibold">IT Supporter - Student worker</p>
-                                <ul className=" list-disc inline-block ml-[20%] text-left w-full 
+                                <ul className=" list-disc inline-block ml-[6%] text-left w-full
+                                                sm:ml-[20%]
                                                 md:ml-[10%]">
-                                    <li>Solving tickets in ServiceNow</li>
+                                    <li className="">Solving tickets in ServiceNow</li>
                                     <li>Managing Sharepoint sites</li>
                                     <li>Creating Power Apps</li>
                                     <li>Creating Automation flows</li>
