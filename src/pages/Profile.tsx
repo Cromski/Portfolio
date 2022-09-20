@@ -61,16 +61,20 @@ const PageContent: FC<{}> = () => {
                 </div>
                 <div className=" mx-auto">
                     <Thing overHeader={"Information"}>
-                        <div className=" flex-row mb-3">
-                            <div className=" w-[50%] text-right inline-block pr-[2%]">
-                                <h1 className=" text-lg font-semibold">Email:</h1>
-                                <h1 className=" text-lg font-semibold">Phone:</h1>
-                                <h1 className=" text-lg font-semibold">Birthyear:</h1>
-                            </div>
-                            <div className=" w-[50%] text-left inline-block pl-[2%] leading-[1.75rem]">
-                                <h1>jakobrhenriksen@outlook.com</h1>
-                                <h1>+45 1234 1234</h1>
-                                <h1>2001</h1>
+                        <div className=" mb-3">
+                            <div className=" grid grid-cols-2 grid-flow-row gap-x-3">
+                                <h1 className=" text-lg font-semibold col-span-2
+                                               md:col-span-1 md:text-right ">Email:</h1>
+                                <h1 className=" my-auto col-span-2 mb-2
+                                                md:col-span-1 md:text-left md:mb-0">jakobrhenriksen@outlook.com</h1>
+                                <h1 className=" text-lg font-semibold col-span-2
+                                               md:col-span-1 md:text-right ">Phone:</h1>
+                                <h1 className=" my-auto col-span-2 mb-2
+                                                md:col-span-1 md:text-left md:mb-0">+45 1234 1234</h1>
+                                <h1 className=" text-lg font-semibold col-span-2
+                                               md:col-span-1 md:text-right ">Birthyear:</h1>
+                                <h1 className=" my-auto col-span-2 mb-2
+                                                md:col-span-1 md:text-left md:mb-0">2001</h1>
                             </div>
                         </div>
                     </Thing>
@@ -81,7 +85,8 @@ const PageContent: FC<{}> = () => {
                         <div className="mb-3">
                             <Block header={'Chr. Hansen'} date={'2020-present'}>
                                 <p className=" mt-[10px] text-lg font-semibold">IT Supporter - Student worker</p>
-                                <ul className=" list-disc inline-block ml-[10%] w-3/4 text-left">
+                                <ul className=" list-disc inline-block ml-[20%] text-left w-full 
+                                                md:ml-[10%]">
                                     <li>Solving tickets in ServiceNow</li>
                                     <li>Managing Sharepoint sites</li>
                                     <li>Creating Power Apps</li>
