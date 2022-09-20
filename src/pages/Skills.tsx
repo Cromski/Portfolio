@@ -59,8 +59,8 @@ const PageContent = () => {
                     <SkillSquare skillName='Jetbrains apps' pic={TempFacePic} skillRating='Experienced' />
                     <SkillSquare skillName='VS Code' pic={TempFacePic} skillRating='Experienced' />
                     <SkillSquare skillName='Visual Studio' pic={TempFacePic} skillRating='Experienced' />
-                    <SkillSquare skillName='Adobe Photoshop' pic={TempFacePic} skillRating='Experienced' />
-                    <SkillSquare skillName='Adobe Premiere Pro' pic={TempFacePic} skillRating='Experienced' />
+                    <SkillSquare skillName='Photoshop' pic={TempFacePic} skillRating='Experienced' />
+                    <SkillSquare skillName='Premiere Pro' pic={TempFacePic} skillRating='Experienced' />
                     <SkillSquare skillName='Affinity Designer' pic={TempFacePic} skillRating='Experienced' />
                     <SkillSquare skillName='Affinity Photo' pic={TempFacePic} skillRating='Experienced' />
                     <SkillSquare skillName='Vim' pic={TempFacePic} skillRating='Experienced' />

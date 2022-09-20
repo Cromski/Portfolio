@@ -9,7 +9,8 @@ const SkillSquareContainer: FC<Props> = ({skillHeader, children}) => {
     return (
         <div className=''>
             <h1 className=' font-medium text-3xl mb-[10px]'>{skillHeader}</h1>
-            <div className=' content-center flex-row w-[65%] mx-auto'>
+            <div className=' content-center flex-row w-[90%] mx-auto
+                            realsm:w-[75%]'>
                 {children}
             </div>
         </div>
