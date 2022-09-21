@@ -3,6 +3,7 @@ import Skills from "../pages/Skills"
 import { useContext } from "react"
 import PageContext from "../PageContext"
 import { useMediaQuery } from 'react-responsive'
+import BackButton from "./BackButton"
 
 const amountOfPages:number = 2;
 
@@ -58,14 +59,18 @@ const SmallScreen = () => {
         if (pageContext.currentPage === "Profile") {
             return (
                 <div>
-                    <Profile />
+                    <Profile>
+                        <BackButton />
+                    </Profile>
                 </div>
             )
         } else {
             if (pageContext.currentPage === "Skills") {
                 return (
                     <div>
-                        <Skills />
+                        <Skills>
+                            <BackButton />
+                        </Skills>
                     </div>
                 )
             } else {

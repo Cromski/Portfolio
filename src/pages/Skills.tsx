@@ -1,6 +1,6 @@
 import { Page } from '../extra/types'
 import SkillSVG from '../assets/Skill.svg'
-import { useContext } from "react"
+import { useContext, ReactNode, FC } from "react"
 import PageContext from "../PageContext"
 import SkillSquare from '../components/SkillSquare'
 import TempFacePic from '../assets/IotaHeroes-Logo.jpg'
@@ -35,22 +35,26 @@ const info: Page = {
     color: "#291b40"
 }
 
-const Skills = () => {
+interface Props {
+    children?: ReactNode
+}
+
+const Skills: FC<Props> = ({children}) => {
     const pageContext = useContext(PageContext)
 
     return (
     <div style={{ backgroundColor: `${info.color}`}} className=" h-full" >
         
-        {pageContext.currentPage === info.id ? <PageContent/> : <MinimizedPage/>}
+        {pageContext.currentPage === info.id ? <PageContent>{children}</PageContent> : <MinimizedPage/>}
     </div>
     )
 }
 
-const PageContent = () => {
+const PageContent: FC<Props> = ({children}) => {
     const pageContext = useContext(PageContext)
     return (
         <div className=" absolute w-full realsm:w-[90%] h-full overflow-hidden">
-            
+            {children}
             <div style={{ backgroundColor: `${info.color}`}} className=' overflow-y-auto h-screen scrollbar-hide'>
                 <h1 className=" pt-[3%] pb-6 text-4xl cursor-pointer
                             transition-all hover:tracking-wider"
@@ -69,9 +73,9 @@ const PageContent = () => {
                 </SkillSquareContainer>
                 
                 <SkillSquareContainer skillHeader='Technologies'>
+                    <SkillSquare skillName='Git' pic={GitLogo} skillRating='Experienced' />
                     <SkillSquare skillName='React' pic={ReactLogo} skillRating='Experienced' />
                     <SkillSquare skillName='TailwindCSS' pic={TailwindCSSLogo} skillRating='Experienced' />
-                    <SkillSquare skillName='Git' pic={GitLogo} skillRating='Experienced' />
                     <SkillSquare skillName='Blazor' pic={BlazorLogo} skillRating='Experienced' />
                 </SkillSquareContainer>
 

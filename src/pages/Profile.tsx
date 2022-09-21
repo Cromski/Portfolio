@@ -1,6 +1,6 @@
 import { Page } from "../extra/types"
 import ProfileSVG from '../assets/Profile.svg'
-import { useContext, FC } from "react"
+import { useContext, FC, ReactNode } from "react"
 import PageContext from "../PageContext"
 import Thing from "../components/Thing"
 import Block from "../components/Block"
@@ -19,23 +19,27 @@ const info: Page = {
     color: "#343434"
 }
 
-const Profile: FC<{}> = () => {
+interface Props {
+    children?: ReactNode
+}
+
+const Profile: FC<Props> = ({children}) => {
     const pageContext = useContext(PageContext)
     
     return (
     <div style={{ backgroundColor: `${info.color}`}} className=" h-full" >
 
-        {pageContext.currentPage === info.id ? <PageContent /> : <MinimizedPage/>}
+        {pageContext.currentPage === info.id ? <PageContent>{children}</PageContent> : <MinimizedPage/>}
         
     </div>
 )}
 
-const PageContent: FC<{}> = () => {
+const PageContent: FC<Props> = ({children}) => {
     const pageContext = useContext(PageContext)
 
     return (
         <div className=" absolute w-full realsm:w-[90%] h-full overflow-hidden">
-        
+            {children}
             <div style={{ backgroundColor: `${info.color}`}} className=' scroll-smooth overflow-y-scroll h-screen scrollbar-hide'> 
                 
                 <h1 className="pt-[3%] pb-6 text-4xl cursor-pointer
