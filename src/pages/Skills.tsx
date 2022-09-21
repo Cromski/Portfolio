@@ -88,14 +88,14 @@ const PageContent: FC<Props> = ({children}) => {
                     <SkillSquare skillName='Affinity Designer' pic={DesignerLogo} skillRating='Experienced' />
                     <SkillSquare skillName='Affinity Photo' pic={PhotoLogo} skillRating='Experienced' />
                 </SkillSquareContainer>
-
-                <SkillSquareContainer skillHeader='Other'>
-                    <SkillSquare skillName='Office 365' pic={Office365Logo} skillRating='Experienced' />
-                    <SkillSquare skillName='LaTeX' pic={LatexLogo} skillRating='Experienced' />
-                    {/* <SkillSquare skillName='Power apps' pic={TempFacePic} skillRating='Experienced' />
-                    <SkillSquare skillName='Service Now' pic={TempFacePic} skillRating='Experienced' /> */}
-                </SkillSquareContainer>
-                
+                <div className=' mb-32'>
+                    <SkillSquareContainer skillHeader='Other'>
+                        <SkillSquare skillName='Office 365' pic={Office365Logo} skillRating='Experienced' />
+                        <SkillSquare skillName='LaTeX' pic={LatexLogo} skillRating='Experienced' />
+                        {/* <SkillSquare skillName='Power apps' pic={TempFacePic} skillRating='Experienced' />
+                        <SkillSquare skillName='Service Now' pic={TempFacePic} skillRating='Experienced' /> */}
+                    </SkillSquareContainer>
+                </div>
             </div>
         </div>
     )
