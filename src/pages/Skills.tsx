@@ -17,6 +17,15 @@ import ReactLogo from '../assets/react.png'
 import TailwindCSSLogo from '../assets/tailwindcss.png'
 import GitLogo from '../assets/git.png'
 import BlazorLogo from '../assets/blazor.png'
+import JetBrainsLogo from '../assets/jetbrains.png'
+import VSCodeLogo from '../assets/vscode.png'
+import VisualStudioLogo from '../assets/visualstudio.png'
+import PhotoshopLogo from '../assets/photoshop.png'
+import PremiereProLogo from '../assets/premierepro.png'
+import DesignerLogo from '../assets/designer.png'
+import PhotoLogo from '../assets/photo.png'
+import Office365Logo from '../assets/o365.png'
+import LatexLogo from '../assets/latex.png'
 
 const info: Page = {
     miniHeading: "Skills",
@@ -67,21 +76,20 @@ const PageContent = () => {
                 </SkillSquareContainer>
 
                 <SkillSquareContainer skillHeader={`IDE's and editors`}>
-                    <SkillSquare skillName='Jetbrains apps' pic={TempFacePic} skillRating='Experienced' />
-                    <SkillSquare skillName='VS Code' pic={TempFacePic} skillRating='Experienced' />
-                    <SkillSquare skillName='Visual Studio' pic={TempFacePic} skillRating='Experienced' />
-                    <SkillSquare skillName='Adobe Photoshop' pic={TempFacePic} skillRating='Experienced' />
-                    <SkillSquare skillName='Adobe Premiere Pro' pic={TempFacePic} skillRating='Experienced' />
-                    <SkillSquare skillName='Affinity Designer' pic={TempFacePic} skillRating='Experienced' />
-                    <SkillSquare skillName='Affinity Photo' pic={TempFacePic} skillRating='Experienced' />
-                    <SkillSquare skillName='Vim' pic={TempFacePic} skillRating='Experienced' />
+                    <SkillSquare skillName='Jetbrains apps' pic={JetBrainsLogo} skillRating='Experienced' />
+                    <SkillSquare skillName='VS Code' pic={VSCodeLogo} skillRating='Experienced' />
+                    <SkillSquare skillName='Visual Studio' pic={VisualStudioLogo} skillRating='Experienced' />
+                    <SkillSquare skillName='Adobe Photoshop' pic={PhotoshopLogo} skillRating='Experienced' />
+                    <SkillSquare skillName='Adobe Premiere Pro' pic={PremiereProLogo} skillRating='Experienced' />
+                    <SkillSquare skillName='Affinity Designer' pic={DesignerLogo} skillRating='Experienced' />
+                    <SkillSquare skillName='Affinity Photo' pic={PhotoLogo} skillRating='Experienced' />
                 </SkillSquareContainer>
 
                 <SkillSquareContainer skillHeader='Other'>
-                    <SkillSquare skillName='Office 365' pic={TempFacePic} skillRating='Experienced' />
-                    <SkillSquare skillName='LaTeX' pic={TempFacePic} skillRating='Experienced' />
-                    <SkillSquare skillName='Power apps' pic={TempFacePic} skillRating='Experienced' />
-                    <SkillSquare skillName='Service Now' pic={TempFacePic} skillRating='Experienced' />
+                    <SkillSquare skillName='Office 365' pic={Office365Logo} skillRating='Experienced' />
+                    <SkillSquare skillName='LaTeX' pic={LatexLogo} skillRating='Experienced' />
+                    {/* <SkillSquare skillName='Power apps' pic={TempFacePic} skillRating='Experienced' />
+                    <SkillSquare skillName='Service Now' pic={TempFacePic} skillRating='Experienced' /> */}
                 </SkillSquareContainer>
                 
             </div>
