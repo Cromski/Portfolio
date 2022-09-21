@@ -72,10 +72,6 @@ const PageContent: FC<Props> = ({children}) => {
                                 <h1 className=" my-auto col-span-2 mb-2
                                                 md:col-span-1 md:text-left md:mb-0">jakobrhenriksen@outlook.com</h1>
                                 <h1 className=" text-lg font-semibold col-span-2
-                                               md:col-span-1 md:text-right ">Phone:</h1>
-                                <h1 className=" my-auto col-span-2 mb-2
-                                                md:col-span-1 md:text-left md:mb-0">+45 1234 1234</h1>
-                                <h1 className=" text-lg font-semibold col-span-2
                                                md:col-span-1 md:text-right ">Birthyear:</h1>
                                 <h1 className=" my-auto col-span-2 mb-2
                                                 md:col-span-1 md:text-left md:mb-0">2001</h1>
