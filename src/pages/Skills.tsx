@@ -62,36 +62,36 @@ const PageContent: FC<Props> = ({children}) => {
                     >{info.bigHeading}</h1>
                 <img src={info.svg} alt="svg" className=" w-[80px] mx-auto " />
                 <SkillSquareContainer skillHeader='Languages'>
-                    <SkillSquare skillName='JavaScript' pic={JavaScriptLogo} skillRating='Experienced' />
-                    <SkillSquare skillName='TypeScript' pic={TypeScriptLogo} skillRating='Experienced' />
-                    <SkillSquare skillName='C#' pic={CSharpLogo} skillRating='Experienced' />
-                    <SkillSquare skillName='SQL' pic={SQLLogo} skillRating='Experienced' />
-                    <SkillSquare skillName='Python' pic={PythonLogo} skillRating='Experienced' />
-                    <SkillSquare skillName='F#' pic={FSharpLogo} skillRating='Experienced' />
-                    <SkillSquare skillName='Go' pic={GoLogo} skillRating='Experienced' />
-                    <SkillSquare skillName='Java' pic={JavaLogo} skillRating='Experienced' />
+                    <SkillSquare skillName='JavaScript' pic={JavaScriptLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#f7df1e,#f7df1e)'} />
+                    <SkillSquare skillName='TypeScript' pic={TypeScriptLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#3178C6,#3178C6)'} />
+                    <SkillSquare skillName='C#' pic={CSharpLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#823085,#823085)'} />
+                    <SkillSquare skillName='SQL' pic={SQLLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#0064a5,#0064a5)'} />
+                    <SkillSquare skillName='Python' pic={PythonLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#306998,#306998,#306998,#FFD43B,#FFD43B,#FFD43B)'} />
+                    <SkillSquare skillName='F#' pic={FSharpLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(90deg,#008cf0,#5ed0fd)'} />
+                    <SkillSquare skillName='Go' pic={GoLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#29BEB0,#29BEB0)'} />
+                    <SkillSquare skillName='Java' pic={JavaLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(180deg,#ED8B00,#007396,#007396)'} />
                 </SkillSquareContainer>
                 
                 <SkillSquareContainer skillHeader='Technologies'>
-                    <SkillSquare skillName='Git' pic={GitLogo} skillRating='Experienced' />
-                    <SkillSquare skillName='React' pic={ReactLogo} skillRating='Experienced' />
-                    <SkillSquare skillName='TailwindCSS' pic={TailwindCSSLogo} skillRating='Experienced' />
-                    <SkillSquare skillName='Blazor' pic={BlazorLogo} skillRating='Experienced' />
+                    <SkillSquare skillName='Git' pic={GitLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#F1502F,#f1502f)'} />
+                    <SkillSquare skillName='React' pic={ReactLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#61DBFB,#61DBFB)'} />
+                    <SkillSquare skillName='TailwindCSS' pic={TailwindCSSLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#38bdf8,#38bdf8)'} />
+                    <SkillSquare skillName='Blazor' pic={BlazorLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#5C268E,#5C268E)'} />
                 </SkillSquareContainer>
 
                 <SkillSquareContainer skillHeader={`IDE's and editors`}>
-                    <SkillSquare skillName='Jetbrains apps' pic={JetBrainsLogo} skillRating='Experienced' />
-                    <SkillSquare skillName='VS Code' pic={VSCodeLogo} skillRating='Experienced' />
-                    <SkillSquare skillName='Visual Studio' pic={VisualStudioLogo} skillRating='Experienced' />
-                    <SkillSquare skillName='Adobe Photoshop' pic={PhotoshopLogo} skillRating='Experienced' />
-                    <SkillSquare skillName='Adobe Premiere Pro' pic={PremiereProLogo} skillRating='Experienced' />
-                    <SkillSquare skillName='Affinity Designer' pic={DesignerLogo} skillRating='Experienced' />
-                    <SkillSquare skillName='Affinity Photo' pic={PhotoLogo} skillRating='Experienced' />
+                    <SkillSquare skillName='Jetbrains apps' pic={JetBrainsLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#823085,#823085)'} />
+                    <SkillSquare skillName='VS Code' pic={VSCodeLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#823085,#823085)'} />
+                    <SkillSquare skillName='Visual Studio' pic={VisualStudioLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#823085,#823085)'} />
+                    <SkillSquare skillName='Adobe Photoshop' pic={PhotoshopLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#823085,#823085)'} />
+                    <SkillSquare skillName='Adobe Premiere Pro' pic={PremiereProLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#823085,#823085)'} />
+                    <SkillSquare skillName='Affinity Designer' pic={DesignerLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#823085,#823085)'} />
+                    <SkillSquare skillName='Affinity Photo' pic={PhotoLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#823085,#823085)'} />
                 </SkillSquareContainer>
                 <div className=' mb-32'>
                     <SkillSquareContainer skillHeader='Other'>
-                        <SkillSquare skillName='Office 365' pic={Office365Logo} skillRating='Experienced' />
-                        <SkillSquare skillName='LaTeX' pic={LatexLogo} skillRating='Experienced' />
+                        <SkillSquare skillName='Office 365' pic={Office365Logo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#823085,#823085)'} />
+                        <SkillSquare skillName='LaTeX' pic={LatexLogo} skillRating='Experienced' bgColor={info.color} outlineColor={'linear-gradient(130deg,#823085,#823085)'} />
                         {/* <SkillSquare skillName='Power apps' pic={TempFacePic} skillRating='Experienced' />
                         <SkillSquare skillName='Service Now' pic={TempFacePic} skillRating='Experienced' /> */}
                     </SkillSquareContainer>
