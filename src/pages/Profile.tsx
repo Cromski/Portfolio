@@ -10,9 +10,10 @@ import instagramSVG from '../assets/InstagramSVG.svg'
 import linkedinSVG from '../assets/LinkedInSVG.svg'
 import youtubeSVG from '../assets/YoutubeSVG.svg'
 import githubSVG from '../assets/GithubSVG.svg'
+import portrait from '../assets/010_7706jsdCp.jpg'
 
 const info: Page = {
-    miniHeading: "About me",
+    miniHeading: "ABOUT ME",
     bigHeading: "Jakob Henriksen",
     id: "Profile",
     svg: ProfileSVG,
@@ -46,7 +47,7 @@ const PageContent: FC<Props> = ({children}) => {
                             transition-all hover:tracking-wider" 
                     onClick={() => pageContext.setCurrentPage("home")}
                             >Jakob Henriksen</h1>
-                <img src={tempFaceIcon} alt="me" className="rounded-[40px] min-w-[170px] w-[17%] mx-auto mt-6
+                <img loading="lazy" src={portrait} alt="me" className="rounded-[40px] min-w-[170px] w-[17%] mx-auto mt-6
                                                             duration-[50ms] hover:rounded-[10px] " />
                 
                 <div className=" flex h-[45px] w-full pt-3 pb-3 justify-center ">
@@ -122,12 +123,18 @@ const MinimizedPage = () => {
     const pageContext = useContext(PageContext)
 
     return (
-        <div className=' h-full' onClick={() => pageContext.setCurrentPage(info.id)}>
+        <div className=' h-full group cursor-pointer' onClick={() => pageContext.setCurrentPage(info.id)}>
             <div style={{ backgroundColor: `${info.color}`}} className=" flex-col relative top-[40%] overflow-hidden " onClick={() => pageContext.setCurrentPage(info.id)}> {/*put pt-20% in maybe line below */}
                 
-                <h1 className=" cursor-default inline-block text-4xl text-neutral-300">{info.miniHeading}</h1>
-                <img src={info.svg} alt="svg" className="  w-[80px] mx-auto mt-[1%] " />
-            
+                <h1 className=" inline-block text-4xl text-neutral-300 
+                                group-hover:text-[#EEE8AA] transition-all">{info.miniHeading}</h1>
+
+                <svg className={ `fill-[#D4D4D4] mx-auto w-[100px]
+                                  group-hover:fill-[#EEE8AA] transition-all`} viewBox="0 0 512 512" >
+                    <circle cx="2618.73" cy="1718.04" r="86.861" transform="matrix(1 0 0 1 -2362.315 -1548.897)"/>
+                    <path d="M2777.37 1923.79c0-71.98-59.52-130.34-132.94-130.34h-41c-73.42 0-132.93 58.36-132.93 130.34v1.78h306.87v-1.78Z" transform="matrix(1.19662 0 0 1.22047 -2883.411 -1889.013)"/>
+                </svg>
+
             </div>
         </div>
     )

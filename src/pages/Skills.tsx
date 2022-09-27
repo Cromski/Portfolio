@@ -28,7 +28,7 @@ import Office365Logo from '../assets/o365.png'
 import LatexLogo from '../assets/latex.png'
 
 const info: Page = {
-    miniHeading: "Skills",
+    miniHeading: "SKILLS",
     bigHeading: "Skills",
     id: "Skills",
     svg: SkillSVG,
@@ -104,10 +104,18 @@ const PageContent: FC<Props> = ({children}) => {
 const MinimizedPage = () => {
     const pageContext = useContext(PageContext)
     return (
-        <div className=' h-full' onClick={() => pageContext.setCurrentPage(info.id)}>
+        <div className=' h-full group cursor-pointer' onClick={() => pageContext.setCurrentPage(info.id)}>
             <div style={{ backgroundColor: `${info.color}`}} className=' flex-col relative top-[40%] overflow-hidden ' >
-                <h1 className=" cursor-default inline-block text-4xl text-neutral-300 ">{info.miniHeading}</h1>
-                <img src={info.svg} alt="svg" className="  w-[80px] mx-auto mt-[1%] " />
+                <h1 className=" inline-block text-4xl text-neutral-300 
+                                group-hover:text-[#EEE8AA] transition-all">{info.miniHeading}</h1>
+                {/* <img src={info.svg} alt="svg" className="  w-[80px] mx-auto mt-[1%] fill-slate-600" /> */}
+
+                {/* <Skillsvgg color={'#EEE8AA'} hoverColor={'#EEE8AA'} scale={0.6} /> */}
+                <svg className={ `fill-[#D4D4D4] mx-auto w-[100px]
+                                  group-hover:fill-[#EEE8AA] transition-all`} viewBox="0 0 512 512" >
+                    <path d="m3298.05 1616.39 30.39 93.56h98.38l-79.59 57.83 30.4 93.55-79.58-57.82-79.59 57.82 30.4-93.55-79.59-57.83h98.38l30.4-93.56Z" transform="matrix(1.48249 0 0 1.48249 -4633.302 -2328.203)"/>
+                </svg>
+                
             </div>
         </div>
     )
