@@ -10,7 +10,7 @@ import instagramSVG from '../assets/InstagramSVG.svg'
 import linkedinSVG from '../assets/LinkedInSVG.svg'
 import youtubeSVG from '../assets/YoutubeSVG.svg'
 import githubSVG from '../assets/GithubSVG.svg'
-import portrait from '../assets/010_7706jsdCp.jpg'
+import portrait from '../assets/portrait.jpg'
 
 const info: Page = {
     miniHeading: "ABOUT ME",
