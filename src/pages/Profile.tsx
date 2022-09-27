@@ -32,7 +32,7 @@ const Profile: FC<Props> = ({children}) => {
 
         {pageContext.currentPage === info.id ? <PageContent>{children}</PageContent> : <MinimizedPage/>}
         
-    </div>
+    </div> 
 )}
 
 const PageContent: FC<Props> = ({children}) => {
