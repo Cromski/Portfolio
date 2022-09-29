@@ -1,0 +1,7 @@
+back button hover
+swipe to change pages on touch
+redesign home page to give more information about what the reader know what it's about
+sticky bar on iphone including backbutton to use less margin on phone
+small cards on pc, big cards on phone
+smaller pic res to load faster
+
