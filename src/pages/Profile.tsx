@@ -11,6 +11,8 @@ import linkedinSVG from '../assets/LinkedInSVG.svg'
 import youtubeSVG from '../assets/YoutubeSVG.svg'
 import githubSVG from '../assets/GithubSVG.svg'
 import portrait from '../assets/portrait.jpg'
+import { StaticImage } from "gatsby-plugin-image"
+import Portraitt from '../pics/portraitt'
 
 const info: Page = {
     miniHeading: "ABOUT ME",
@@ -49,7 +51,8 @@ const PageContent: FC<Props> = ({children}) => {
                             >Jakob Henriksen</h1>
                 <img loading="lazy" src={portrait} alt="me" className="rounded-[40px] min-w-[170px] w-[17%] mx-auto mt-6
                                                             duration-[50ms] hover:rounded-[10px] " />
-                
+                <Portraitt />
+
                 <div className=" flex h-[45px] w-full pt-3 pb-3 justify-center ">
                     <LinkIcons hrefLink={'https://www.github.com/cromski'} alt={'github'} icon={githubSVG} />
                     <LinkIcons hrefLink={'https://www.youtube.com/krowell'} alt={'youtube'} icon={youtubeSVG} />
