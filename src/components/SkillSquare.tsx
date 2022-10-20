@@ -7,7 +7,7 @@ interface Props{
 }
 
 const SkillSquare: FC<Props> = ({skillName, pic, skillRating}) => (
-    <div className='inline-block ml-[1%] mr-[1%] mb-[3%] min-w-[135px] w-[14%] content-center bg-slate-200 bg-opacity-5 border-2 rounded-2xl
+    <div className='inline-block ml-[1%] mr-[1%] mb-[3%] min-w-[126px] w-[14%] content-center bg-slate-200 bg-opacity-5 border-2 rounded-2xl
                      realsm:h-16 realsm:w-[90%] realsm:my-[6px] realsm:mx-auto  
                      group hover:bg-opacity-[0.15] duration-150 transition-all'>
         <img className=' w-[85%] mx-auto mt-[6%] rounded-lg aspect-square
