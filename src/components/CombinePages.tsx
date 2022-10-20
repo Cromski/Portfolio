@@ -11,7 +11,7 @@ const CombinePages = () => {
 
     const pageContext = useContext(PageContext)
 
-    const isSmall = useMediaQuery( { query: '(max-width: 1020px)' } )
+    const isSmall = useMediaQuery( { query: '(max-width: 1019px)' } ) //1020 - 1 bcs otherwise it doesnt work :s
 
     return(
         <div className="">
