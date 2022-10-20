@@ -61,7 +61,15 @@ const PageContent: FC<Props> = ({children}) => {
                     onClick={() => pageContext.setCurrentPage("home")}
                     >{info.bigHeading}</h1>
                 <img src={info.svg} alt="svg" className=" w-[80px] mx-auto " />
-                <div className=' w-4/5 mx-auto'>
+                <div className=' w-4/5 mx-auto mb-32
+                                 realsm:w-11/12'>
+                    <SkillSquareContainer skillHeader='Technologies'>
+                        <SkillSquare skillName='Git' pic={GitLogo} skillRating='Experienced' />
+                        <SkillSquare skillName='React' pic={ReactLogo} skillRating='Experienced' />
+                        <SkillSquare skillName='TailwindCSS' pic={TailwindCSSLogo} skillRating='Experienced' />
+                        <SkillSquare skillName='Blazor' pic={BlazorLogo} skillRating='Experienced' />
+                    </SkillSquareContainer>
+
                     <SkillSquareContainer skillHeader='Languages'>
                         <SkillSquare skillName='JavaScript' pic={JavaScriptLogo} skillRating='Experienced' />
                         <SkillSquare skillName='TypeScript' pic={TypeScriptLogo} skillRating='Experienced' />
@@ -71,13 +79,6 @@ const PageContent: FC<Props> = ({children}) => {
                         <SkillSquare skillName='F#' pic={FSharpLogo} skillRating='Experienced' />
                         <SkillSquare skillName='Go' pic={GoLogo} skillRating='Experienced' />
                         <SkillSquare skillName='Java' pic={JavaLogo} skillRating='Experienced' />
-                    </SkillSquareContainer>
-                    
-                    <SkillSquareContainer skillHeader='Technologies'>
-                        <SkillSquare skillName='Git' pic={GitLogo} skillRating='Experienced' />
-                        <SkillSquare skillName='React' pic={ReactLogo} skillRating='Experienced' />
-                        <SkillSquare skillName='TailwindCSS' pic={TailwindCSSLogo} skillRating='Experienced' />
-                        <SkillSquare skillName='Blazor' pic={BlazorLogo} skillRating='Experienced' />
                     </SkillSquareContainer>
 
                     <SkillSquareContainer skillHeader={`IDE's and editors`}>
@@ -89,14 +90,12 @@ const PageContent: FC<Props> = ({children}) => {
                         <SkillSquare skillName='Affinity Designer' pic={DesignerLogo} skillRating='Experienced' />
                         <SkillSquare skillName='Affinity Photo' pic={PhotoLogo} skillRating='Experienced' />
                     </SkillSquareContainer>
-                    <div className=' mb-32'>
-                        <SkillSquareContainer skillHeader='Other'>
-                            <SkillSquare skillName='Office 365' pic={Office365Logo} skillRating='Experienced' />
-                            <SkillSquare skillName='LaTeX' pic={LatexLogo} skillRating='Experienced' />
-                            {/* <SkillSquare skillName='Power apps' pic={TempFacePic} skillRating='Experienced' />
-                            <SkillSquare skillName='Service Now' pic={TempFacePic} skillRating='Experienced' /> */}
-                        </SkillSquareContainer>
-                    </div>
+                    <SkillSquareContainer skillHeader='Other'>
+                        <SkillSquare skillName='Office 365' pic={Office365Logo} skillRating='Experienced' />
+                        <SkillSquare skillName='LaTeX' pic={LatexLogo} skillRating='Experienced' />
+                        {/* <SkillSquare skillName='Power apps' pic={TempFacePic} skillRating='Experienced' />
+                        <SkillSquare skillName='Service Now' pic={TempFacePic} skillRating='Experienced' /> */}
+                    </SkillSquareContainer>
                 </div>
             </div>
         </div>

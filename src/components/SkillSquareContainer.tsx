@@ -7,9 +7,11 @@ interface Props{
 
 const SkillSquareContainer: FC<Props> = ({skillHeader, children}) => {
     return (
-        <div className=' inline-block min-w-[200px] w-1/3'>
+        <div className=' 
+                        realsm:inline-block realsm:align-top realsm:min-w-[200px] realsm:w-[300px] '>
             <h1 className=' font-medium text-3xl mb-[10px]'>{skillHeader}</h1>
-            <div className=' flex-column mx-auto'>
+            <div className=' content-center flex-row w-[85%] mx-auto
+                            realsm:flex-column realsm:w-full realsm:content-start '>
                 {children}
             </div>
         </div>
